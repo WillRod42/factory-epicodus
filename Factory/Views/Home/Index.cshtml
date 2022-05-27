@@ -1,0 +1,10 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models
+
+<h1>Factory</h1>
+<p>@Html.ActionLink("Engineers", "Index", "Engineer", null, new { @class = "btn btn-primary" })</p>
+<p>@Html.ActionLink("Machines", "Index", "Machine", null, new { @class = "btn btn-primary" })</p>
+<p>@Html.ActionLink("List All", "List", "Home", null, new { @class = "btn btn-primary" })</p>
