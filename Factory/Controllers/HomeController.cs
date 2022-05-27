@@ -21,5 +21,12 @@ namespace Factory.Controllers
     {
       return View();
     }
+
+    public ActionResult List()
+    {
+      ViewBag.Engineers = _db.Engineers.ToList();
+      ViewBag.Machines = _db.Machines.ToList();
+      return View();
+    }
   }
 }
