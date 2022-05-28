@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Factory.Models;
+using System;
 
 namespace Factory.Controllers
 {
@@ -55,6 +56,16 @@ namespace Factory.Controllers
       var thisMachine = _db.Machines.FirstOrDefault(machine => machine.MachineId == id);
       _db.Machines.Remove(thisMachine);
       _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+		[HttpPost]
+    public ActionResult DeleteEngineer(int joinId)
+    {
+      var joinEntry = _db.EngineerMachines.FirstOrDefault(entry => entry.EngineerMachineId == joinId);
+      _db.EngineerMachines.Remove(joinEntry);
+      _db.SaveChanges();
+      Console.WriteLine("Test");
       return RedirectToAction("Index");
     }
 
