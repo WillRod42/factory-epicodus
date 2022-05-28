@@ -65,7 +65,6 @@ namespace Factory.Controllers
       var joinEntry = _db.EngineerMachines.FirstOrDefault(entry => entry.EngineerMachineId == joinId);
       _db.EngineerMachines.Remove(joinEntry);
       _db.SaveChanges();
-      Console.WriteLine("Test");
       return RedirectToAction("Index");
     }
 
