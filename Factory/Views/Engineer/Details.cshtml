@@ -32,5 +32,6 @@
 </ul>
 
 <p>@Html.ActionLink("Add a Machine", "AddMachine", "Engineer", new { id = Model.EngineerId }, new { @class = "btn btn-primary" })</p>
+<p>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId }, new { @class = "btn btn-primary" })</p>
 <p>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId }, new { @class = "btn btn-danger" })</p>
 <p>@Html.ActionLink("Engineer List", "Index", "Engineer", null, new { @class = "btn btn-primary" })</p>
