@@ -1,4 +1,4 @@
-# Hair Salon
+# Factory
 
 #### By William Rodriguez
 
